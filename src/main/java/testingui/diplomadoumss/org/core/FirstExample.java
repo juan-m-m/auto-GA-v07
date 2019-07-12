@@ -1,7 +1,7 @@
 package testingui.diplomadoumss.org.core;
 
 import org.openqa.selenium.WebDriver;
-import testingui.diplomadoumss.org.managepage.login.Login;
+import testingui.diplomadoumss.org.managepage.catalogo.Catalogo;
 import testingui.diplomadoumss.org.utilsfiles.PropertyAccesor;
 
 import java.util.HashMap;
@@ -11,7 +11,9 @@ public class FirstExample {
     public static void main(String[] args) {
 
         WebDriver webDriver = DriverManager.getInstance().getWebDriver();
-        webDriver.get(PropertyAccesor.getInstance().getURL());
+        webDriver.get(PropertyAccesor.getInstance().getURLstore());
+        Catalogo catalogo = new Catalogo();
+        catalogo.clickCatalogo();
         webDriver.quit();
         //BasePage basePage = new BasePage();
     }
