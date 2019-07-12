@@ -17,7 +17,7 @@ public class Catalogo extends BasePage {
         catalogo.click();
     }
 
-    public void initBrowser() {
+    public void init() {
         webDriver.get(PropertyAccesor.getInstance().getURL());
     }
 

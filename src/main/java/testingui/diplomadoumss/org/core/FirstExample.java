@@ -16,7 +16,7 @@ public class FirstExample {
         //BasePage basePage = new BasePage();
 
         Catalogo catalogo = new Catalogo();
-        catalogo.initBrowser();
+        catalogo.init();
 
         //Thread.sleep(30000);
 
