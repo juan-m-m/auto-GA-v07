@@ -1,6 +1,5 @@
 package testingui.diplomadoumss.org.core;
 
-import org.openqa.selenium.WebDriver;
 import testingui.diplomadoumss.org.managepage.login.Login;
 import testingui.diplomadoumss.org.utilsfiles.PropertyAccesor;
 
@@ -10,13 +9,13 @@ import java.util.Map;
 public class FirstExample {
     public static void main(String[] args) {
 
-        WebDriver webDriver = DriverManager.getInstance().getWebDriver();
-        webDriver.get(PropertyAccesor.getInstance().getURL());
         Login login = new Login();
+        login.init();
         login.setEmail(PropertyAccesor.getInstance().getEmail());
         login.setPassword(PropertyAccesor.getInstance().getPassword());
         login.click();
-        webDriver.quit();
+        login.finish();
+
         //BasePage basePage = new BasePage();
     }
 

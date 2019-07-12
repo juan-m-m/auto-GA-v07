@@ -3,6 +3,7 @@ package testingui.diplomadoumss.org.managepage.login;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import testingui.diplomadoumss.org.managepage.BasePage;
+import testingui.diplomadoumss.org.utilsfiles.PropertyAccesor;
 
 /**
  * @author Marcelo Garay
@@ -29,6 +30,14 @@ public class Login extends BasePage {
 
     public void click() {
         button.click();
+    }
+
+    public void init() {
+        webDriver.get(PropertyAccesor.getInstance().getURL());
+    }
+
+    public void finish() {
+        webDriver.quit();
     }
 
 }
