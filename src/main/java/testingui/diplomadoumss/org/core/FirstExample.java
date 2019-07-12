@@ -12,6 +12,10 @@ public class FirstExample {
 
         WebDriver webDriver = DriverManager.getInstance().getWebDriver();
         webDriver.get(PropertyAccesor.getInstance().getURL());
+        Login login = new Login();
+        login.setEmail(PropertyAccesor.getInstance().getEmail());
+        login.setPassword(PropertyAccesor.getInstance().getPassword());
+        login.click();
         webDriver.quit();
         //BasePage basePage = new BasePage();
     }
