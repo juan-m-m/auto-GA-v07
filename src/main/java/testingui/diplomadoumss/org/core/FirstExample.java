@@ -1,8 +1,6 @@
 package testingui.diplomadoumss.org.core;
 
-import org.openqa.selenium.WebDriver;
 import testingui.diplomadoumss.org.managepage.catalogo.Catalogo;
-import testingui.diplomadoumss.org.utilsfiles.PropertyAccesor;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,12 +8,20 @@ import java.util.Map;
 public class FirstExample {
     public static void main(String[] args) {
 
-        WebDriver webDriver = DriverManager.getInstance().getWebDriver();
-        webDriver.get(PropertyAccesor.getInstance().getURLstore());
-        Catalogo catalogo = new Catalogo();
-        catalogo.clickCatalogo();
-        webDriver.quit();
+//        WebDriver webDriver = DriverManager.getInstance().getWebDriver();
+//        webDriver.get(PropertyAccesor.getInstance().getURLstore());
+//        Catalogo catalogo = new Catalogo();
+//        catalogo.clickCatalogo();
+//        webDriver.quit();
         //BasePage basePage = new BasePage();
+
+        Catalogo catalogo = new Catalogo();
+        catalogo.initBrowser();
+
+        //Thread.sleep(30000);
+
+        catalogo.clickCatalogo();
+        catalogo.finish();
     }
 
     public static void exampleMap() {
